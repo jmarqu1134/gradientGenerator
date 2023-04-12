@@ -20,8 +20,10 @@ function setGradient() {
   body.style.background = `linear-gradient(to right, ${colorString} )`;
 
   cssHex.textContent = "Hex conversion: " + color1.value + ", " + color2.value;
-  cssRGB.textContent =
-    "RGB conversion: " + hexToRgb(color1.value) + ", " + hexToRgb(color2.value);
+  cssRGB.textContent = `linear-gradient(to right, 
+    ${hexToRgb(color1.value)}, 
+    ${hexToRgb(color2.value)} )`;
+  //"RGB conversion: " + hexToRgb(color1.value) + ", " + hexToRgb(color2.value);
 }
 
 color1.addEventListener("input", setGradient);
